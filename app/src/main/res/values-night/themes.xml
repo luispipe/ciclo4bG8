@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.UNLeeG8" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/pink_dark</item>
+        <item name="colorAccent">@color/blue</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
