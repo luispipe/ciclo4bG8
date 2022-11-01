@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">UNLeeG8</string>
     <string name="enviar">Enviar</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="car">Shopping</string>
+    <string name="settings">Settings</string>
 
 
 </resources>
