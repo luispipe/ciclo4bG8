@@ -13,10 +13,12 @@ class HomeActivity: AppCompatActivity() {
         setContentView(R.layout.activity_home)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater:MenuInflater= menuInflater
         inflater.inflate(R.menu.nav_unlee,menu)
         return true
-    }
+    }*/
+
+
 
 }
