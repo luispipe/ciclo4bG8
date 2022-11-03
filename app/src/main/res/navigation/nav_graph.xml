@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_booksFragment2"
+            app:destination="@id/booksFragment2" />
+        <action
+            android:id="@+id/action_menuFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_shipFragment"
+            app:destination="@id/shipFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/booksFragment2"
+        android:name="com.example.unleeg8.View.ui.fragments.BooksFragment"
+        android:label="fragment_books"
+        tools:layout="@layout/fragment_books" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.HelpFragment"
+        android:label="HelpFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/shipFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.ShipFragment"
+        android:label="ShipFragment" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.example.unleeg8.View.ui.fragments.ShopFragment"
+        android:label="ShopFragment" />
+</navigation>
