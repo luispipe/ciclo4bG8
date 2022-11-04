@@ -3,6 +3,7 @@ package com.example.unleeg8.View.ui.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.unleeg8.R
 import com.example.unleeg8.databinding.ActivityMainBinding
@@ -11,6 +12,7 @@ class login: AppCompatActivity() {
     //lateinit var binding: ActivityMainBinding
     lateinit var signupbutton:Button
     lateinit var loginbutton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // binding= ActivityMainBinding.inflate(layoutInflater)
@@ -26,5 +28,9 @@ class login: AppCompatActivity() {
             startActivity(Intent(this,HomeActivity::class.java))
         }
 
+        val txtLossPass= findViewById<TextView>(R.id.lossPass)
+        txtLossPass.setOnClickListener {
+            startActivity(Intent(this,RecoverActivity::class.java))
+        }
     }
 }
