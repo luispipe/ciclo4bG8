@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "637083966818",
+    "project_id": "unleeg8-cb2a7",
+    "storage_bucket": "unleeg8-cb2a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637083966818:android:36d599289de0a490b0a03b",
+        "android_client_info": {
+          "package_name": "com.example.unleeg8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637083966818-qcuk23794p7f0fasdo3h00411imd4uv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwCrzEznVVHvVUr605usB0adt0ynEYGAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637083966818-qcuk23794p7f0fasdo3h00411imd4uv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -19,7 +19,7 @@
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/signupName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.432" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/signupEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.529" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/signupBirthdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.629" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/signupPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.731" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/signupPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
