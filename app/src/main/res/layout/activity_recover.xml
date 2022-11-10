@@ -36,9 +36,9 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/restoreEmail"
+        android:layout_width="204dp"
+        android:layout_height="49dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="97dp"
@@ -46,41 +46,24 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword3"
+        app:layout_constraintBottom_toTopOf="@+id/restore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="60dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/buttonChange"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
-
     <Button
-        android:id="@+id/buttonChange"
+        android:id="@+id/restore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginTop="42dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="83dp"
-        android:text="Change"
+        android:text="Restore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/restoreEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
