@@ -8,11 +8,7 @@
     android:orientation="vertical"
     tools:context=".View.ui.fragments.BooksFragment"
     android:background="@color/white">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,6 +34,12 @@
                 android:textStyle="bold">
             </TextView>
         </RelativeLayout>
-    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
 
 </LinearLayout>
