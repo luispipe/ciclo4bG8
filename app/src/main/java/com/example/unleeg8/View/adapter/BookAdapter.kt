@@ -37,6 +37,7 @@ class BookAdapter(val context: Context):RecyclerView.Adapter<BookAdapter.ViewHol
 
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         fun bin(book:books){
+            //Acá agregar ImageView con picasso o gliger
             itemView.findViewById<TextView>(R.id.tvTitleBook).text=book.title
             itemView.findViewById<TextView>(R.id.tvAuthorBook).text = book.author
             itemView.findViewById<TextView>(R.id.tvPriceBook).text= book.price.toString()
