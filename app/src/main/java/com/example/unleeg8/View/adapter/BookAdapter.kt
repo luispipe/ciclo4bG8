@@ -4,11 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.unleeg8.Model.books
 import com.example.unleeg8.R
+import com.squareup.picasso.Picasso
 
 
 class BookAdapter(val context: Context):RecyclerView.Adapter<BookAdapter.ViewHolder>(){
@@ -38,6 +40,8 @@ class BookAdapter(val context: Context):RecyclerView.Adapter<BookAdapter.ViewHol
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         fun bin(book:books){
             //Acá agregar ImageView con picasso o gliger
+
+            Picasso.get().load(book.url).into(itemView.findViewById<ImageView>(R.id.imgBook))
             itemView.findViewById<TextView>(R.id.tvTitleBook).text=book.title
             itemView.findViewById<TextView>(R.id.tvAuthorBook).text = book.author
             itemView.findViewById<TextView>(R.id.tvPriceBook).text= book.price.toString()

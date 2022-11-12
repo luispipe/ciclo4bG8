@@ -5,8 +5,10 @@
     app:cardBackgroundColor="@color/blue_dark"
     app:cardElevation="5dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
     app:contentPadding="4dp"
+    app:cardCornerRadius="10dp"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,6 +18,8 @@
             android:id="@+id/imgBook"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             >
         </ImageView>
         <TextView
@@ -24,7 +28,6 @@
             android:layout_height="wrap_content"
             android:text="Title"
             android:textStyle="bold"
-            android:textAlignment="center"
             android:textSize="20dp"
             android:layout_toRightOf="@+id/imgBook">
         </TextView>
@@ -52,6 +55,5 @@
             android:layout_below="@+id/tvAuthorBook"
             >
         </TextView>
-
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
