@@ -38,6 +38,26 @@
                 android:textStyle="bold">
             </TextView>
         </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/mapGoogle"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <org.osmdroid.views.MapView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/mapOpenStreet"
+                />
+        </androidx.cardview.widget.CardView>
+        
     </LinearLayout>
 
 </LinearLayout>
