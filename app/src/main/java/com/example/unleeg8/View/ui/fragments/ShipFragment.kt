@@ -1,10 +1,15 @@
 package com.example.unleeg8.View.ui.fragments
 
+import android.annotation.SuppressLint
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.unleeg8.R
 import com.example.unleeg8.databinding.FragmentShipBinding
 import com.google.android.gms.maps.GoogleMap
@@ -29,6 +34,9 @@ class ShipFragment : Fragment(), OnMapReadyCallback {
     private var param2: String? = null*/
 
     lateinit var googleMap: GoogleMap
+    companion object{
+        const val REQUEST_CODE_LOCATION=0
+    }
 
     lateinit var mapView: MapView
 
@@ -87,8 +95,39 @@ class ShipFragment : Fragment(), OnMapReadyCallback {
         val colombia= LatLng(5.070275,-75.513817)
         map?.let {
             this.googleMap= it
-            map.addMarker(MarkerOptions().position(colombia))
+            map.addMarker(
+                MarkerOptions()
+                .position(colombia)
+                .title("Manizales UnLeeG8")
+            )
+        }
+        enableLocation()
+    }
+
+    fun isLocationPermissionGrated()=ContextCompat.checkSelfPermission(
+        this.requireContext(),android.Manifest.permission.ACCESS_FINE_LOCATION
+    )==PackageManager.PERMISSION_GRANTED
+
+    fun requestLocationPermission(){
+        if(ActivityCompat.shouldShowRequestPermissionRationale(this.requireActivity(),
+            android.Manifest.permission.ACCESS_FINE_LOCATION)){
+            Toast.makeText(this.context,"Activar permisos de ubicación",Toast.LENGTH_LONG).show()
+        }else{
+            ActivityCompat.requestPermissions(this.requireActivity(), arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+            com.example.unleeg8.View.ui.fragments.ShipFragment.Companion.REQUEST_CODE_LOCATION
+                )
         }
     }
+
+    @SuppressLint("MissingPermission")
+    fun enableLocation(){
+        if(!::googleMap.isInitialized)return
+        if(isLocationPermissionGrated())
+            googleMap.isMyLocationEnabled=true
+        else
+            requestLocationPermission()
+    }
+
+
 
 }

@@ -38,6 +38,132 @@
                 android:textStyle="bold">
             </TextView>
         </RelativeLayout>
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:id="@+id/photoProfile"
+            android:layout_gravity="center"
+            android:src="@drawable/perfil"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cameraProfile"
+
+            android:layout_marginLeft="40dp"
+            android:background="@color/blue"
+            android:text="Camera"
+            android:textStyle="bold"
+                    />
+
+        <Button
+            android:id="@+id/galleryProfile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-48dp"
+            android:background="@color/blue_light"
+            android:text="Gallery"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="Name:"
+            android:textStyle="bold"
+            />
+        
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameProfile"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Name"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_dark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="E-mail:"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailProfile"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="E-mail"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_dark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Number Phone:"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneProfile"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Number Phone"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_dark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Birth date:"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/birthProfile"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:inputType="date"
+            android:text="Birth date"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_dark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Password:"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordProfile"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:inputType="date"
+            android:text="Password"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_dark"
+            />
+
     </LinearLayout>
 
 </LinearLayout>
