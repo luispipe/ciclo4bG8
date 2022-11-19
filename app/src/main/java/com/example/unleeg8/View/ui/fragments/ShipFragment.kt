@@ -40,8 +40,8 @@ class ShipFragment : Fragment(), OnMapReadyCallback {
 
     lateinit var mapView: MapView
 
-    var _binding: FragmentShipBinding?=null
-    val binding get()= _binding!!
+//    var _binding: FragmentShipBinding?=null
+//    val binding get()= _binding!!
 
 
     override fun onCreateView(
@@ -49,8 +49,7 @@ class ShipFragment : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding= FragmentShipBinding.inflate(inflater, container, false)
-        val view= binding.root
+        val view= inflater.inflate(R.layout.fragment_ship, container, false)
         return view
     }
 
@@ -73,7 +72,7 @@ class ShipFragment : Fragment(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         //Open Street Maps
-        mapView= binding.mapOpenStreet
+        mapView= view.findViewById(R.id.mapOpenStreet)
         mapView.setTileSource(TileSourceFactory.MAPNIK)
 
         //Open Street Map Location

@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cameraProfile"
 
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="60dp"
             android:background="@color/blue"
             android:text="Camera"
             android:textStyle="bold"
@@ -81,9 +81,19 @@
             android:id="@+id/nameProfile"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
-            android:text="Name"
+            android:text=""
+            android:hint="Name"
             android:textStyle="bold"
             android:backgroundTint="@color/blue_dark"
+            />
+        <ImageButton
+            android:id="@+id/editName"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/edit"
+            android:background="@drawable/theme_gradients_background"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -100,9 +110,19 @@
             android:id="@+id/emailProfile"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
-            android:text="E-mail"
+            android:text=""
+            android:hint="E-mail"
             android:textStyle="bold"
             android:backgroundTint="@color/blue_dark"
+            />
+        <ImageButton
+            android:id="@+id/editEmail"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/edit"
+            android:background="@drawable/theme_gradients_background"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -119,9 +139,19 @@
             android:id="@+id/phoneProfile"
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
-            android:text="Number Phone"
+            android:text=""
+            android:hint="Number Phone"
             android:textStyle="bold"
             android:backgroundTint="@color/blue_dark"
+            />
+        <ImageButton
+            android:id="@+id/editPhone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/edit"
+            android:background="@drawable/theme_gradients_background"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -139,29 +169,19 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:inputType="date"
-            android:text="Birth date"
+            android:text=""
+            android:hint="Birth date"
             android:textStyle="bold"
             android:backgroundTint="@color/blue_dark"
             />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:text="Password:"
-            android:textStyle="bold"
-            />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/passwordProfile"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:inputType="date"
-            android:text="Password"
-            android:textStyle="bold"
-            android:backgroundTint="@color/blue_dark"
+        <ImageButton
+            android:id="@+id/editBirth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-40dp"
+            android:src="@drawable/edit"
+            android:background="@drawable/theme_gradients_background"
             />
 
     </LinearLayout>
