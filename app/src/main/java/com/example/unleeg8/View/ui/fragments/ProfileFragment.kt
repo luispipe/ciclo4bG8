@@ -1,13 +1,17 @@
 package com.example.unleeg8.View.ui.fragments
 
+import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
-import android.util.Log
+import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.unleeg8.R
 import com.google.firebase.auth.FirebaseAuth
@@ -15,6 +19,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
+@Suppress("DEPRECATION")
 class ProfileFragment : Fragment() {
 
     lateinit var firebaseAuth: FirebaseAuth
@@ -42,6 +47,8 @@ class ProfileFragment : Fragment() {
         val editEmail= view.findViewById<ImageButton>(R.id.editEmail)
         val editBirth= view.findViewById<ImageButton>(R.id.editBirth)
         val editPhone= view.findViewById<ImageButton>(R.id.editPhone)
+        val btncamara=view.findViewById<Button>(R.id.cameraProfile)
+        val btngallery=view.findViewById<Button>(R.id.galleryProfile)
 
         editName.setOnClickListener{
             database.child(user?.uid.toString()).child("name").setValue(name.text.toString()).addOnSuccessListener {
@@ -54,20 +61,24 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(this.context,"Se cambio el telefono",Toast.LENGTH_LONG).show()
             }
         }
-
         editBirth.setOnClickListener{
             database.child(user?.uid.toString()).child("birthdate").setValue(birthDate.text.toString()).addOnSuccessListener {
                 Toast.makeText(this.context,"Se cambio la fecha",Toast.LENGTH_LONG).show()
             }
         }
-
-
         editEmail.setOnClickListener{
             user?.updateEmail(email.text.toString())
         }
 
-
-
+        btncamara.setOnClickListener {
+            val intent=Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(intent,123)
+        }
+        btngallery.setOnClickListener {
+            val intent=Intent(Intent.ACTION_PICK)
+            intent.type="image/*"
+            startActivityForResult(intent,456)
+        }
 
         email.setText(user?.email.toString())
 
@@ -92,8 +103,17 @@ class ProfileFragment : Fragment() {
             }
 
         })*/
+    }
 
-
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val imageView=view?.findViewById<ImageView>(R.id.photoProfile)
+        if(requestCode==123){
+            var bitmap=data?.extras?.get("data") as Bitmap
+            imageView?.setImageBitmap(bitmap)
+        }else if (requestCode==456){
+            imageView?.setImageURI(data?.data)
+        }
     }
 
 }

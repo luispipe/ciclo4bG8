@@ -32,12 +32,20 @@
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.unleeg8.View.ui.fragments.FavoritesFragment"
-        android:label="FavoritesFragment" />
+        android:label="FavoritesFragment" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_book_detail_Fragment"
+            app:destination="@id/book_detail_Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/booksFragment2"
         android:name="com.example.unleeg8.View.ui.fragments.BooksFragment"
         android:label="fragment_books"
-        tools:layout="@layout/fragment_books" />
+        tools:layout="@layout/fragment_books" >
+        <action
+            android:id="@+id/action_booksFragment2_to_book_detail_Fragment"
+            app:destination="@id/book_detail_Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/helpFragment"
         android:name="com.example.unleeg8.View.ui.fragments.HelpFragment"
@@ -53,5 +61,13 @@
     <fragment
         android:id="@+id/shopFragment"
         android:name="com.example.unleeg8.View.ui.fragments.ShopFragment"
-        android:label="ShopFragment" />
+        android:label="ShopFragment" >
+        <action
+            android:id="@+id/action_shopFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/book_detail_Fragment"
+        android:name="com.example.unleeg8.View.ui.fragments.Book_detail_Fragment"
+        android:label="Book_detail_Fragment" />
 </navigation>

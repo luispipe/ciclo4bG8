@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation"
+                    android:layout_margin="@dimen/defaultLayoutMargin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivBookDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/heigthImageProduct"
+                            android:src="@mipmap/ic_launcher"
+                            android:layout_margin="@dimen/defaultLayoutMargin"/>
+                        <TextView
+                            android:id="@+id/tvNameBookDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal"
+                            android:textSize="@dimen/sizeNameProduct"
+                            android:textColor="@color/blue_dark"/>
+                        <TextView
+                            android:id="@+id/tvAuthorBookDetailt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Author"
+                            android:gravity="center_horizontal"
+                            android:textSize="@dimen/sizePriceProduct"
+                            android:textColor="@color/blue_dark"/>
+
+
+                        <TextView
+                            android:id="@+id/tvPriceBookDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$999.999"
+                            android:gravity="center_horizontal"
+                            android:textSize="@dimen/sizePriceProduct"
+                            android:textColor="@color/blue_dark"/>
+
+
+                        <Button
+                            android:id="@+id/btBuyBookDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/blue"
+                            android:layout_marginLeft="-40dp"
+                            android:text="Add to cart"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/defaultLayoutMargin"/>
+
+                        <ImageButton
+                            android:id="@+id/favoritos"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/carrito"
+                            android:layout_marginLeft="230dp"
+                            android:layout_marginTop="-50dp"
+                            android:background="@color/blue_light"
+                            android:src="@drawable/ic_baseline_heart_broken_24"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </FrameLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

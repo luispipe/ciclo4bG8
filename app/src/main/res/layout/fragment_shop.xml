@@ -40,4 +40,35 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/priceShop"
+        android:layout_width="194dp"
+        android:layout_height="33dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@color/blue"
+        android:textStyle="bold"
+        android:textColor="@color/white">
+    </TextView>
+    <TextView
+        android:id="@+id/Shopfinal"
+        android:layout_width="194dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-35dp"
+        android:text="Compra"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@color/blue"
+        android:textStyle="bold"
+        android:textColor="@color/white">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
 </LinearLayout>
